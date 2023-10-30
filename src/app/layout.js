@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './globals.css'
 
 
@@ -9,7 +10,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <ol>
+          <li>
+            <Link href="/create">create</Link>
+          </li>
+        </ol>
+        
+        {children}
+      </body>
     </html>
   )
 }
