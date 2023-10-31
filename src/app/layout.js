@@ -12,11 +12,9 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <ol>
-          <li>
-            <Link href="/create">create</Link>
-          </li>
+          <li><Link href="/">home</Link></li>
+          <li><Link href="/create">create</Link></li>
         </ol>
-        
         {children}
       </body>
     </html>
