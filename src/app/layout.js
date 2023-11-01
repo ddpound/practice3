@@ -11,11 +11,22 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <ol>
-          <li><Link href="/">home</Link></li>
-          <li><Link href="/create">create</Link></li>
-        </ol>
+        <header>
+          <li>
+            <Link href="/">
+              <img className='main-img-logo' src='/imgs/mainImg/main-img.jpeg'></img>
+            </Link>
+          </li>
+          <ol className='menu-list'>
+            <li><Link href="/">home</Link></li>
+            <li><Link href="/create">create</Link></li>
+            <li><Link href="/read/10">read</Link></li>
+          </ol>
+        </header>    
         {children}
+        <footer>
+          footer 입니다 디자인 예정 
+        </footer>
       </body>
     </html>
   )

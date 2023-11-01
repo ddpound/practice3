@@ -2,8 +2,14 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <>
-      Hello, NextJs!
+    <> 
+      <div>
+        메인 페이지 입니다
+        Hello, NextJs!
+      </div>
+      <div>
+        Hello, NextJs!
+      </div>
     </>
   )
 }
