@@ -1,6 +1,12 @@
 import Image from 'next/image'
+import { MongoClient } from 'mongodb'
 
-export default function Home() {
+export default async function Home() {
+  
+  const client = await MongoClient.connect('mongodb+srv://tsj:1234@cluster0.b2ehjmu.mongodb.net/')
+  const db = client.db('practice')
+  let list =  db.collection("test_board").find().toArray();
+  console.log(list)
   return (
     <> 
       <div>
@@ -8,7 +14,7 @@ export default function Home() {
         Hello, NextJs!
       </div>
       <div>
-        Hello, NextJs!
+        
       </div>
     </>
   )
