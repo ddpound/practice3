@@ -5,8 +5,9 @@ export default async function Home() {
   
   const client = await MongoClient.connect('mongodb+srv://tsj:1234@cluster0.b2ehjmu.mongodb.net/')
   const db = client.db('practice')
-  let list =  db.collection("test_board").find().toArray();
-  console.log(list)
+  let list =  db.collection("test_board");
+
+  console.log(list.find())
   return (
     <> 
       <div>
