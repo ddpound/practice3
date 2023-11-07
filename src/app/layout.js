@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           <ol className='menu-list'>
             <li><Link href="/">home</Link></li>
             <li><Link href="/create">create</Link></li>
-            <li><Link href="/read/10">read</Link></li>
+            <li><Link href="/read">read</Link></li>
           </ol>
         </header>    
         {children}

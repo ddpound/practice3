@@ -1,8 +1,9 @@
-export default async function read(props){
+export default async function read(){
     const res = await fetch("http://localhost:3000/test-board");
     const board = await res.json();
     return(
     <>
+    <h2>글목록</h2>
     {board.test_board.map((r, idx)=>{
        return (
        <div key={idx}>
@@ -11,8 +12,6 @@ export default async function read(props){
        </div>
        )
     })}
-        read 페이지입니다
-        {props.params.i}
     </>
     )
     
