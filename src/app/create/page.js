@@ -6,8 +6,9 @@ export default function create(){
         <>
             <form onSubmit={(e)=>{
                 e.preventDefault();
-                const title = e.target.value;
-                const content = e.target.value;
+                
+                const title = e.target.title.value;
+                const content = e.target.content.value;
                 const option = {
                     method: 'POST',
                     headers: {
@@ -22,8 +23,8 @@ export default function create(){
                     });
             }}>
                 <h2>create 창입니다!</h2>
-                <label>제목 : </label><input type="text"></input>
-                <label>내용 : </label><input type="text"></input>
+                <label>제목 : </label><input name="title" type="text"></input>
+                <label>내용 : </label><input name="content" type="text"></input>
                 <input type="submit" value="작성" />
             </form>
             
