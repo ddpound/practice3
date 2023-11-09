@@ -1,7 +1,7 @@
 export default async function read(){
-    const res = await fetch("http://localhost:3000/test-board", {next : {revalidate : 0} });
+    const res = await fetch("http://localhost:3000/test-board", { cache : 'no-store'});
     const board = await res.json();
-    console.log(board.test_board)
+    
     return(
     <>
     <h2>글목록</h2>
