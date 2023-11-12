@@ -8,6 +8,7 @@ export default async function read(){
     {board.test_board.map((r, idx)=>{
        return (
        <div key={idx}>
+        {r._id}
         <h3>{r.title}</h3>
         <p>{r.content}</p>
        </div>
