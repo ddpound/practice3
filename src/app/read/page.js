@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default async function read(){
     const res = await fetch("http://localhost:3000/test-board", { cache : 'no-store'});
     const board = await res.json();
@@ -8,9 +10,10 @@ export default async function read(){
     {board.test_board.map((r, idx)=>{
        return (
        <div key={idx}>
-        {r._id}
-        <h3>{r.title}</h3>
-        <p>{r.content}</p>
+        <Link href={"http://localhost:3000/read/"+r._id}> 
+            <h3>{r.title}</h3>
+            <p>{r.content}</p>
+        </Link>
        </div>
        )
     })}
