@@ -1,6 +1,4 @@
 "use client"
-import { Result } from "postcss";
-
 export default function create(){
     return(
         <>
@@ -27,8 +25,6 @@ export default function create(){
                 <label>내용 : </label><input name="content" type="text"></input>
                 <input type="submit" value="작성" />
             </form>
-            
         </>
     )
-    
 }

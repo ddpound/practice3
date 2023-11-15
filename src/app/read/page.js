@@ -7,17 +7,28 @@ export default async function read(){
     return(
     <>
     <h2>글목록</h2>
-    {board.test_board.map((r, idx)=>{
-       return (
-       <div key={idx}>
-        <Link href={"http://localhost:3000/read/"+r._id}> 
-            <h3>{r.title}</h3>
-            <p>{r.content}</p>
-        </Link>
-       </div>
-       )
-    })}
+    <div className="board-page-body">
+        {board.test_board.map((r, idx)=>{
+        return (
+        <div className="board-warpper"  key={idx}>
+            <Link href={"http://localhost:3000/read/"+r._id}> 
+                <div className="board-box">
+                    <div className="board-box-header">
+                        <h3>{r.title}</h3>
+                    </div>
+                    <div className="board-box-body">
+                        <p>{r.content}</p>
+                    </div>
+                    <div className="board-box-footer">
+
+                    </div>
+                </div>
+            </Link>
+        </div>
+        )
+        })}
+    </div>
+
     </>
     )
-    
 }
