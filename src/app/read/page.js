@@ -10,7 +10,10 @@ export default async function read(){
             <div className="board-page-body">
                 {boards.test_board.map((board, idx)=>{
                 return (
-                    <BoardBox board={board} idx={idx} />
+                    <BoardBox 
+                        board={board} 
+                        index={idx} 
+                    />
                 )
                 })}
             </div>

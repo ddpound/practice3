@@ -1,17 +1,16 @@
 import Link from "next/link";
 
-const BoardBox = (board, idx) =>{
-    const boxInBoard = board.board;
+const BoardBox = ({board, index}) =>{
     return (
         <>
-            <div className="board-warpper" key={board.idx}>
-                <Link href={"http://localhost:3000/read/" + boxInBoard._id}> 
+            <div className="board-warpper" key={index}>
+                <Link href={"http://localhost:3000/read/" + board._id}> 
                     <div className="board-box">
                         <div className="board-box-header">
-                            <h3>{boxInBoard.title}</h3>
+                            <h3>{board.title}</h3>
                         </div>
                         <div className="board-box-body">
-                            <p>{boxInBoard.content}</p>
+                            <p>{board.content}</p>
                         </div>
                         <div className="board-box-footer">
                         </div>
