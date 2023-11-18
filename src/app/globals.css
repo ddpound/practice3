@@ -5,6 +5,8 @@ body{
 header{
   width: 100%;
   height: 100px;
+  color: white;
+  background-color: black;
 }
 
 header li{
@@ -36,6 +38,6 @@ footer{
   height: auto;
 }
 
-.board-warrper{
-  width: 30%;
+.board-warpper{
+  border: 2px solid black;
 }
