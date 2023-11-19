@@ -9,6 +9,10 @@ header{
   background-color: black;
 }
 
+header a{
+  color: white;
+}
+
 header li{
   float: left;
   margin: 0 30px;

@@ -17,7 +17,7 @@ export default function create(){
                 fetch('http://localhost:3000/test-board', option)
                     .then(res=>res.json)
                     .then(result => {
-                        alert('저장이 완료되었습니다.')
+                        alert('저장이 완료되었습니다.');
                     });
             }}>
                 <h2>create 창입니다!</h2>
