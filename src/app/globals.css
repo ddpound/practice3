@@ -1,5 +1,6 @@
-body{
+html body{
   margin: 0;
+  padding: 0;
 }
 
 header{
@@ -7,6 +8,7 @@ header{
   height: 100px;
   color: white;
   background-color: black;
+  margin-top: 0;
 }
 
 header a{
@@ -21,6 +23,11 @@ header li{
 
 .main-img-logo{
   width: 10%;
+  border-radius: 20px;
+}
+
+.menu-list{
+  margin: 0;
 }
 
 .menu-list ol{
